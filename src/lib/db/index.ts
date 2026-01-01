@@ -1,7 +1,8 @@
 import * as k from 'kysely';
 import { Pool, types } from 'pg';
 
-export interface DB {};
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export interface DB {}
 
 export async function getDb() {
 	types.setTypeParser(types.builtins.NUMERIC, (v) => Number(v));

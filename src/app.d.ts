@@ -4,8 +4,8 @@ declare global {
 			env: {
 				HYPERDRIVE: {
 					connectionString: string;
-				}
-			}
+				};
+			};
 		}
 	}
 }
