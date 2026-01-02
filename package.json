@@ -1,6 +1,6 @@
 {
 	"name": "@thetinkerinc/sprout",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
@@ -36,6 +36,10 @@
 		"./db": {
 			"types": "./dist/db/index.d.ts",
 			"svelte": "./dist/db/index.js"
+		},
+		"./commanders": {
+			"types": "./dist/commanders/index.d.ts",
+			"svelte": "./dist/commanders/index.js"
 		}
 	},
 	"peerDependencies": {
@@ -66,6 +70,7 @@
 		"publint": "^0.3.16",
 		"svelte": "^5.46.1",
 		"svelte-check": "^4.3.5",
+		"svelte-clerk": "^0.20.2",
 		"tailwindcss": "^4.1.18",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.51.0",
@@ -75,6 +80,7 @@
 		"svelte"
 	],
 	"dependencies": {
+		"@thetinkerinc/commander": "^0.1.4",
 		"kysely": "^0.28.9",
 		"pg": "^8.16.3"
 	}
