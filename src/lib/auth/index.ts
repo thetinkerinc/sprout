@@ -3,13 +3,13 @@ import { createClerkClient } from 'svelte-clerk/server';
 import { PUBLIC_CLERK_PUBLISHABLE_KEY } from '$env/static/public';
 import { CLERK_SECRET_KEY } from '$env/static/private';
 
-async function getEmail(userId: string) {
+export async function getEmail(userId: string) {
 	const clerk = getClerk();
 	const user = await clerk.users.getUser(userId);
 	return user.emailAddresses[0].emailAddress;
 }
 
-async function getUserId(email: string) {
+export async function getUserId(email: string) {
 	const clerk = getClerk();
 	const users = await clerk.users.getUserList({
 		limit: 1,
@@ -27,8 +27,3 @@ function getClerk() {
 		secretKey: CLERK_SECRET_KEY
 	});
 }
-
-export default {
-	getEmail,
-	getUserId
-};
