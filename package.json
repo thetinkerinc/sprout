@@ -22,9 +22,6 @@
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*"
 	],
-	"sideEffects": [
-		"**/*.css"
-	],
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
@@ -38,6 +35,7 @@
 			"svelte": "./dist/db/index.js"
 		},
 		"./commanders": {
+			"types": "./dist/commanders/index.d.ts",
 			"svelte": "./dist/commanders/index.js"
 		}
 	},
