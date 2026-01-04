@@ -1,6 +1,6 @@
 {
 	"name": "@thetinkerinc/sprout",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
@@ -41,6 +41,10 @@
 		"./auth": {
 			"types": "./dist/auth/index.d.ts",
 			"svelte": "./dist/auth/index.js"
+		},
+		"./navigation": {
+			"types": "./dist/navigation/index.d.ts",
+			"svelte": "./dist/navigation/index.js"
 		},
 		"./vite": {
 			"types": "./dist/vite/index.d.ts",
