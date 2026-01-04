@@ -17,7 +17,7 @@ export function sprout(): Plugin {
 	}
 
 	return {
-		name: 'stop-db-on-exit',
+		name: 'sprout',
 		apply: 'serve',
 		configureServer() {
 			if (registered) {
