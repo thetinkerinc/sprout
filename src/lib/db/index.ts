@@ -15,7 +15,8 @@ export async function getDb() {
 			pool: new Pool({
 				connectionString
 			})
-		})
+		}),
+		plugins: [new k.CamelCasePlugin()]
 	});
 }
 
