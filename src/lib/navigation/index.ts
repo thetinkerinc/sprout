@@ -19,6 +19,7 @@ export async function updateSearch(params: { [key: string]: string | undefined }
 	}
 	await goto(resolve((page.url.pathname + query) as Pathname), {
 		replaceState: true,
-		invalidateAll: true
+		invalidateAll: true,
+		keepFocus: true
 	});
 }
