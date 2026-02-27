@@ -3,9 +3,9 @@ import type { RemoteForm, RemoteFormInput } from '@sveltejs/kit';
 type Form = RemoteForm<RemoteFormInput, Promise<unknown>>;
 type EnhanceParams<T extends Form> = Parameters<Parameters<T['enhance']>[0]>[0];
 type CallbackParams<T extends Form> = Pick<EnhanceParams<T>, 'form' | 'data'> & { result: unknown };
-type Callback<T extends Form> = (params: CallbackParams<T>) => Promise<void>;
+type Callback<T extends Form> = (params: CallbackParams<T>) => Promise<unknown> | unknown;
 type ErrorParams<T extends Form> = Pick<EnhanceParams<T>, 'form' | 'data'> & { error: unknown };
-type ErrorCallback<T extends Form> = (params: ErrorParams<T>) => Promise<void>;
+type ErrorCallback<T extends Form> = (params: ErrorParams<T>) => Promise<unknown> | unknown;
 type EnhanceOptions<T extends Form> = {
 	onInvalid?: Callback<T>;
 	onSuccess?: Callback<T>;
