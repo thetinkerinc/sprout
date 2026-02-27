@@ -1,6 +1,6 @@
 {
 	"name": "@thetinkerinc/sprout",
-	"version": "0.4.1",
+	"version": "0.5.0",
 	"license": "MIT",
 	"type": "module",
 	"keywords": [
@@ -53,6 +53,10 @@
 		"./events": {
 			"types": "./dist/events/index.d.ts",
 			"import": "./dist/events/index.js"
+		},
+		"./forms": {
+			"types": "./dist/forms/index.d.ts",
+			"import": "./dist/forms/index.js"
 		},
 		"./vite": {
 			"types": "./dist/vite/index.d.ts",
